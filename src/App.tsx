@@ -1,3 +1,4 @@
+import { AdBanner } from './components/AdBanner';
 import { useState, useEffect, useRef, FormEvent, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Circle, Tooltip, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
@@ -118,6 +119,7 @@ const formatRadius = (meters: number) => {
 };
 
 export default function App() {
+  const [isPremium, setIsPremium] = useState(false);
   const { location: userLocation, error: geoError, loading: geoLoading } = useGeolocation();
   const [isAppLoading, setIsAppLoading] = useState(true);
   const [inputText, setInputText] = useState('');
@@ -1077,6 +1079,7 @@ export default function App() {
           background: rgba(255, 255, 255, 0.2);
         }
       `}</style>
+      <AdBanner isPremium={isPremium} />
     </div>
   );
 }
