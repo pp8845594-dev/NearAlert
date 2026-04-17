@@ -1,7 +1,7 @@
 {
   "name": "NearAlert",
   "short_name": "NearAlert",
-  "description": "Natural languagSmart location-based alarm app that alerts you before reaching your destination using real-time tracking and AI.e location-based alarm app",
+  "description": "Natural language location-based alarm app",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
