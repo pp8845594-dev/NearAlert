@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Custom Leaflet Dark Mode */
+.leaflet-container {
+  background: #0a0a0a !important;
+}
+
+.leaflet-tile {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  background-color: #151619 !important;
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(0,0,0,0.5) !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* Aurora Gradient Animation */
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aurora-bg {
+  background: linear-gradient(-45deg, #4f46e5, #9333ea, #f97316, #3b82f6);
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Glow Pulse for Search Button */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.7); }
+  100% { box-shadow: 0 0 5px rgba(249, 115, 22, 0.4); }
+}
+
+.glow-orange {
+  animation: glow-pulse 2s infinite;
+}
+
+/* Glowing Circle */
+.glowing-circle {
+  filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.6));
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.4));
+  }
+  to {
+    filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.8));
+  }
+}
+
+.custom-div-icon {
+  background: none !important;
+  border: none !important;
+}
