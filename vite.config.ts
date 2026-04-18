@@ -11,46 +11,16 @@ return {
 plugins: [
 react(),
 tailwindcss(),
-
-```
-  // ✅ FIXED: Disable auto-generated manifest
-  VitePWA({
-    registerType: 'autoUpdate',
-    manifest: false,
-
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/i,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'osm-tiles',
-            expiration: {
-              maxEntries: 500,
-              maxAgeSeconds: 60 * 60 * 24 * 30,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-        {
-          urlPattern: /^https:\/\/nominatim\.openstreetmap\.org\/.*/i,
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'nominatim-api',
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24,
-            },
-          },
-        }
-      ]
-    }
-  })
+VitePWA({
+registerType: 'autoUpdate',
+manifest: false,
+workbox: {
+globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+}
+})
 ],
 
+```
 define: {
   'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
 },
