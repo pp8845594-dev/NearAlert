@@ -20,7 +20,6 @@ globPatterns: ['**/*.{js,css,html,ico,png,svg}']
 })
 ],
 
-```
 define: {
   'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
 },
@@ -34,7 +33,6 @@ resolve: {
 server: {
   hmr: process.env.DISABLE_HMR !== 'true',
 },
-```
 
 };
 });
