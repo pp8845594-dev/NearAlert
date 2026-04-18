@@ -1,5 +1,8 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.nearalert.app",
-               "sha256_cert_fingerprints": ["44:13:88:D0:14:B8:05:9F:68:A9:38:14:6E:3D:F1:6A:FA:E7:66:0C:F1:FA:B8:AE:F9:89:5..."] }
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.nearalert.app",
+    "sha256_cert_fingerprints": ["44:13:88:D0:14:B8:05:9F:68:A9:38:14:6E:3D:F1:6A:FA:E7:66:0C:F1:FA:B8:AE:F9:89:50:2F:A2:65:6C:06"]
+  }
 }]
